@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <script>
+    const source = new URL(location.href);
+    const path = source.searchParams.get("id") || source.pathname;
+    const target = new URL("https://www.loseweightathome.info");
+
+    if (path.startsWith("/") && !path.startsWith("//")) {
+      target.pathname = path;
+    }
+
+    target.hash = source.hash;
+    location.replace(target.href);
+  </script>
+</head>
+<body></body>
+</html>
